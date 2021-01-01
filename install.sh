@@ -277,6 +277,7 @@ commonname=HunterNblz
 email=admin@nabil.my.id
 git clone https://github.com/hunternblz/ssh-installer
 cd /root/ssh-installer/files
+rm /etc/pam.d/common-password
 mv common-password /etc/pam.d/
 chmod +x /etc/pam.d/common-password
 cd
