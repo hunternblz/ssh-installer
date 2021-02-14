@@ -487,7 +487,9 @@ mv cekmemory.py cekmemory
 mv cekport.sh cekport
 mv port.sh port
 mv statport.sh statport
+mv expired.sh expired
 cd
+echo "0 0 * * * root /sbin/expired" > /etc/cron.d/expired
 echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 cd ssh-installer/menu
 cp -R menu /usr/bin
@@ -504,6 +506,7 @@ cp -R cekmemory /usr/bin
 cp -R cekport /usr/bin
 cp -R port /usr/bin
 cp -R statport /usr/bin
+cp -R expired /usr/bin
 chmod +x /usr/bin/menu
 chmod +x /usr/bin/usernew
 chmod +x /usr/bin/trial
@@ -518,6 +521,7 @@ chmod +x /usr/bin/cekmemory
 chmod +x /usr/bin/cekport
 chmod +x /usr/bin/port
 chmod +x /usr/bin/statport
+chmod +x /usr/bin/expired
 cd
 systemctl restart nginx
 service openvpn restart
