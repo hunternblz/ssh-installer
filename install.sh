@@ -489,7 +489,7 @@ mv port.sh port
 mv statport.sh statport
 mv expired.sh expired
 cd
-echo "0 0 * * * root /sbin/expired" > /etc/cron.d/expired
+echo "59 23 * * * root expired" >> /etc/crontab
 echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 cd ssh-installer/menu
 cp -R menu /usr/bin
