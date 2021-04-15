@@ -7,14 +7,14 @@ echo -e "|     Hapus Akun     |"
 echo -e "----------------------"
 echo -e ""
 read -p "Username > " Users
-echo -e ""
-read -p "Apakah yakin ingin menghapus $Users ? [Y/n] " Jawaban
+read -p "Apakah yakin ingin menghapus $Users ? [Y/N] > " Jawaban
 echo -e ""
 if [[ $Jawaban =~ ^([yY])$ ]]
         then
                 if getent passwd $Users > /dev/null 2>&1;
                         then
                                 userdel $Users
+                                echo -e ""
                                 echo -e "========================================================="
                                 echo -e "|   Username ($Users) sudah dihapus.   |"
                                 echo -e "---------------------------------------------------------"
