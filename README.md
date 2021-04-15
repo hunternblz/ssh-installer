@@ -19,5 +19,5 @@ $ chmod +x install.sh
 $ ./install.sh
 ```
 
-## OS (Tested)
+## OS
 * Debian 9
