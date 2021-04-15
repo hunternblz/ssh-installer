@@ -328,6 +328,8 @@ make -i install
 apt-get -y install neofetch
 cd
 rm -rf neofetch
+echo "clear" >> .bashrc
+echo "neofetch" >> .bashrc
 apt-get -y update
 cd
 rm /etc/nginx/sites-enabled/default
